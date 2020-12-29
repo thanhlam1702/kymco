@@ -1,0 +1,48 @@
+
+html, body {
+    box-sizing: border-box;
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+img{
+    vertical-align: middle;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+button {
+    cursor: pointer;
+}
+
+.hidden{
+    display: none;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    img{
+        height: 100%;
+        width: 100%;
+    }
+    svg{
+        height: 100% ;
+        width: 100%;
+    }
+}
+.pd-120{
+    padding-top: 120px;
+}
+.mr-120{
+    margin-top: 120px;
+}
+
+.mr-top-80{
+    margin-top: 80px;
+}

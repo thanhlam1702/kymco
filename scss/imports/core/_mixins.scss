@@ -1,0 +1,231 @@
+// Mixins file
+
+@mixin desktop-large {
+	@media (max-width: $lg-max) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media (max-width: $md-max) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media screen and (max-width: $sm-max) {
+		@content;
+	}
+}
+
+@mixin mobile {
+	@media screen and (max-width: $xs-max) {
+		@content;
+	}
+}
+
+@mixin mobile-xxs {
+	@media (max-width: $xxs-max) {
+		@content;
+	}
+}
+
+// canh giua tren va duoi
+@mixin mid{
+    top: 50%;
+    left: 50%;
+	transform: translate(-50%, -50%);
+	position: absolute;
+}
+
+// canh giua theo truc x
+@mixin mid-x{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+// canh giua theo truc y
+@mixin mid-y{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@mixin flex-jus($justify){
+    display: flex;
+    justify-content: $justify;
+}
+
+@mixin flex-al($align){
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex($justify, $align){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align
+}
+
+//Hover bar
+@mixin hover-bar{
+    &::before{
+        content: '';
+        position: absolute;
+        bottom: 25px;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        background: $color-default;
+        transition: all $t $cubic-bezier;
+        transform: scaleX(0);
+        transform-origin: center left;
+    }
+    &:hover::before{
+        transform: scaleX(1);
+        transform-origin: center right;
+        transition: all $t $cubic-bezier;
+    }
+}
+
+@mixin btn-hover-style{
+    &::before{
+        content: "";
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        background: $color-default;
+        transform: scaleX(0);
+        transition: all $t $cubic-bezier;
+        transform-origin: center left;
+    }
+    &:hover::before{
+        transform: scaleX(1);
+        transition: all $t $cubic-bezier;
+        transform-origin: center right;
+    }
+}
+
+@mixin dot-para-text($column){
+    display: -webkit-box;
+    -webkit-line-clamp: $column;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@mixin hidden() {
+	opacity: 0;
+	visibility: hidden;
+}
+@mixin visible() {
+	opacity: 1;
+	visibility: visible;
+}
+
+// text
+@mixin text($size, $font-family, $line-height, $color, $transform) {
+    font-size: $size;
+    font-family: $font-family;
+    line-height: $line-height;
+    color: $color;
+    text-transform: $transform;
+}
+
+@mixin custom-scrollbar {
+	&::-webkit-scrollbar {
+		width: 4px;
+	}
+	&::-webkit-scrollbar-track {
+		background: $black-cl;
+	}
+	&::-webkit-scrollbar-thumb {
+		background: #2b2b2b;
+	}
+}
+
+
+@mixin br($radius) {
+	border-radius: $radius;
+	background-clip: padding-box; /* stops bg color from leaking outside the border: */
+}
+
+@mixin keyframes($animation-name) {
+	@-webkit-keyframes #{$animation-name} {
+		@content;
+	}
+	@-moz-keyframes #{$animation-name} {
+		@content;
+	}
+	@-ms-keyframes #{$animation-name} {
+		@content;
+	}
+	@-o-keyframes #{$animation-name} {
+		@content;
+	}
+	@keyframes #{$animation-name} {
+		@content;
+	}
+}
+
+@mixin animation($str) {
+	-webkit-animation: #{$str};
+	-moz-animation: #{$str};
+	-ms-animation: #{$str};
+	-o-animation: #{$str};
+	animation: #{$str};
+}
+@mixin transform($args) {
+	transform: $args;
+	-webkit-transform: $args;
+	-o-transform: $args;
+}
+
+@mixin transform-origin($args) {
+	transform-origin: $args;
+	-webkit-transform-origin: $args;
+	-o-transform-origin: $args;
+}
+@mixin transition-delay($args) {
+	transition-delay: $args;
+	-webkit-transition-delay: $args;
+	-o-transition-delay: $args;
+}
+
+@mixin maxW($args) {
+	@media (max-width: $args) {
+		@content;
+	}
+}
+
+@mixin minW($args) {
+	@media (min-width: $args) {
+		@content;
+	}
+}
+
+@mixin minH($args) {
+	@media (min-height: $args) {
+		@content;
+	}
+}
+
+@mixin maxH($args) {
+	@media (max-height: $args) {
+		@content;
+	}
+}
+// responsive
+@media (max-width: 1199px) {
+    
+}
+@media (max-width: 991px) {
+    
+}
+@media (max-width: 767px) {
+    
+}
+@media (max-width: 575px) {
+    
+}

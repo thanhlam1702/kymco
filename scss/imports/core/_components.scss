@@ -1,0 +1,63 @@
+.--textbox{
+    width: 100%;
+    .title{
+        text-align: center;
+        @include text(60px, dinea, 65px, $text-black, uppercase);
+    }
+    .description{
+        text-align: center;
+        letter-spacing: 0.4px;
+        margin-top: 24px;
+        @include text(22px, avo, 25px, $text-black, initial);
+    }
+}  
+.--btn-df{
+    background: $color-default;
+    border-radius: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    letter-spacing: 0.4px;
+    display: inline-flex;
+    justify-content: center;
+    width: 356px;
+    a{
+        @include text(25px, dinea, 40px, $text-white, uppercase);
+    }
+}
+.btn-more{
+    text-align: center;
+    margin-top: 80px;
+}
+
+@include tablet{
+    .--textbox{
+        .title{
+            font-size: 44px;
+            line-height: 44px;
+        }
+        .description{
+            font-size: 18px;
+            line-height: 20px;
+        }
+    }  
+}
+@include mobile-xxs{
+    .--textbox{
+        .title{
+            font-size: 24px;
+            line-height: 28px;
+        }
+        .description{
+            font-size: 12px;
+            line-height: 16px;
+            margin-top: 10px;
+        }
+    }
+    .--btn-df{
+        max-width: 356px;
+        width: 100%;
+    }
+    .btn-more{
+        margin-top: 30px;
+    }
+}

@@ -1,0 +1,56 @@
+/* @font-face {
+    font-family: 'avob';
+    src: url('../fonts/UTMAvoBold.woff2') format('woff2'),
+        url('../fonts/UTMAvoBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'avo';
+    src: url('../fonts/UTMAvo.woff2') format('woff2'),
+        url('../fonts/UTMAvo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+} */
+
+@font-face {
+    font-family: 'dinea';
+    src: url('../fonts/SFUDINEngAlt.woff2') format('woff2'),
+        url('../fonts/SFUDINEngAlt.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'dinl';
+    src: url('../fonts/SFUDINLight.woff2') format('woff2'),
+        url('../fonts/SFUDINLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'avob';
+    src: url('../fonts/SVN-Avobold.woff2') format('woff2'),
+        url('../fonts/SVN-Avobold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'avo';
+    src: url('../fonts/SVN-Avo.woff2') format('woff2'),
+        url('../fonts/SVN-Avo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}
+
+
+

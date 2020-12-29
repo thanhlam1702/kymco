@@ -1,15 +1,21 @@
 
-// // import core file
-// @import 'imports/core/reset';
-// @import 'imports/core/variables';
-// @import 'imports/core/mixins';
-// @import 'imports/core/elements';
-// @import 'imports/core/layout';
+// import core file
+@import 'imports/core/reset';
+@import 'imports/core/variables';
+@import 'imports/core/mixins';
+@import 'imports/core//bootstrap-mini';
+@import "imports/core/libs";
+@import 'imports/core/layouts';
+@import 'imports/core/elements';
+@import 'imports/core/components';
 
 
-// //components
-// @import 'imports/core/header';
-// @import 'imports/core/footer';
+@import "imports/core/loading";
 
-// // pages
-// // @import 'pages/home';
+//components
+@import 'imports/core/header';
+@import "imports/core/nav";
+@import 'imports/core/footer';
+
+// pages
+@import 'imports/pages/home';
