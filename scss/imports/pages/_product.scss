@@ -143,6 +143,7 @@
                     display: flex;
                     &__item{
                         width: 30%;
+                        position: relative;
                         &-name{
                             @include text(22px, dinea, 22px, $text-black, uppercase);
                         }
@@ -162,6 +163,25 @@
                                 font-size: 29px;
                                 list-style: 30px;
                             }
+                        }
+                        &-btn{
+                            position: absolute;
+                            bottom: 10px;
+                            width: 100%;
+                            transition: $t;
+                            @include hidden();
+                            .btn-main{
+                                width: 80%;
+                                font-size: 22px;
+                                line-height: 22px;
+                                padding: 8px 8px;
+                                margin-top: 12px;
+                            }
+                        }
+                        &:hover > .listmore__item-btn{
+                            bottom: 20px;
+                            transition: $t;
+                            @include visible();
                         }
                     }
                 }

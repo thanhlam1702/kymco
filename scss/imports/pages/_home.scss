@@ -1,6 +1,12 @@
 .main-wrapper.home{
     //
     --h-slide: 100vh;
+    .btn{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 80px;
+    }
 }
 .slide{
     width: 100%;
@@ -176,14 +182,12 @@
                         font-size: 78.07px;
                     }
                 }
-                &__btn{
+                .btn-main{
                     margin-top: 10px;
                     width: initial;
                     padding: 4px 20px;
-                    a{
-                        font-size: 14.7px;
-                        line-height: 19.64px;
-                    }
+                    font-size: 14.7px;
+                    line-height: 19.64px;
                 }
             }
         }
@@ -239,14 +243,13 @@
                     }
                 }
                 .bottom-btn{
-                    .--btn-df{
-                        width: initial;
-                        padding: 0 30px;
+                    display: flex;
+                    .btn-main{
+                        font-size: 21px;
+                        line-height: 38px;
                         margin-right: 10px;
-                        a{
-                            font-size: 21px;
-                            line-height: 38px;
-                        }
+                        padding: 0 30px;
+                        width: initial;
                     }
                 }
             }
@@ -256,6 +259,7 @@
             }
         }
     }
+    
 }
 .choose{
     background: url("../img/banner-see-more.jpg") no-repeat center;
@@ -276,12 +280,10 @@
             text-align: start;
         }
     }
-    .--btn-df{
+    .btn-main{
         margin-top: 46px;
-            a{
-                font-size: 25px;
-                line-height: 40px;
-            }
+        font-size: 25px;
+        line-height: 40px;
     }
 }
 .news{
@@ -430,12 +432,10 @@
                             line-height: 63px;
                         }
                     }
-                    &__btn{
+                    .btn-main{
                         padding: 4px 20px;
-                        a{
-                            font-size: 12px;
-                            line-height: 14px;
-                        }
+                        font-size: 12px;
+                        line-height: 14px;
                     }
                 }
             }
@@ -456,12 +456,9 @@
                         margin-bottom: 24px;
                     }
                     .bottom-btn{
-                        .--btn-df{
-                            a{
-                                
-                                font-size: 18px;
-                                line-height: 30px;
-                            }
+                        .btn-main{
+                            font-size: 18px;
+                            line-height: 30px;
                         }
                     }
                 }
@@ -580,13 +577,11 @@
                 width: 190px;
             }
         }
-        .--btn-df{
+        .btn-main{
             margin-top: 30px;
             width: 280px;
-                a{
-                    font-size: 20px;
-                    line-height: 30px;
-                }
+            font-size: 20px;
+            line-height: 30px;
         }
     }
     .news{
@@ -725,6 +720,9 @@
         .pd-120{
             padding-top: 40px;
         }
+        .btn-main{
+            margin-top: 30px;
+        }
     }
     .slide{
         &__imgs{
@@ -812,14 +810,13 @@
                         margin-bottom: 12px;
                     }
                     .bottom-btn{
-                        .--btn-df{
+                        .btn-main{
+                            margin-top: 6px;
                             width: initial;
                             padding: 0 20px;
                             margin-right: 10px;
-                            a{
-                                font-size: 12px;
-                                line-height: 16px;
-                            }
+                            font-size: 12px;
+                            line-height: 16px;
                         }
                     }
                 }
@@ -836,13 +833,11 @@
         .container{
             padding-top: initial;
         }
-        .--btn-df{
+        .btn-main{
             margin-top: 10px;
             width: 140px;
-                a{
-                    font-size: 10px;
-                    line-height: 15px;
-                }
+            font-size: 10px;
+            line-height: 15px;
         }
     }
     .news{
