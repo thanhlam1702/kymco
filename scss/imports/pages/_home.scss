@@ -256,7 +256,6 @@
             }
         }
     }
-    
 }
 .choose{
     background: url("../img/banner-see-more.jpg") no-repeat center;
@@ -552,67 +551,18 @@
                 }
             }
             &__detail{
-                position: absolute;
-                display: grid;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                grid-template-columns: 1fr 1fr;
-                grid-template-rows: 100%;
-                z-index: 15;
-                transition: $t $cubic;
-                @include hidden();
-                &-img{
-                    height: 100%;
-                    width: 100%;
-                    overflow: hidden;
-                    img{
-                        object-fit: cover;
-                    }
-                }
+                grid-template-columns: 1fr;
                 &-main{
-                    background: #fff;
-                    box-shadow: $box-shadow-2;
-                    padding: 36px;
+                    background: none;
+                    position: absolute;
+                    padding-left: 40px;
                     .title{
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-                        @include text(69.75px, dinea, 70px, $text-black, uppercase);
-                        .close-product-detail{
-                            height: 74px;
-                            width: 74px;
-                            color: $text-white;
-                            background: $color-default;
-                            font-size: 40px;
-                            font-family: avo;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            cursor: pointer;
-                        }
+                        color: #fff;
                     }
                     .content{
-                        margin-top: 52px;
-                        margin-bottom: 52px;
-                        @include text(16px, avo, 20px, $text-black, inherit);
-                        span{
-                            margin-bottom: 14px;
-                            display: block;
-                        }
+                        color: #fff;
                     }
-                    .bottom-btn{
-                        .--btn-df{
-                            width: initial;
-                            padding: 0 30px;
-                            margin-right: 10px;
-                            a{
-                                font-size: 21px;
-                                line-height: 38px;
-                            }
-                        }
-                    }
+                   
                 }
             }
         }
@@ -843,7 +793,39 @@
                     }
                 }
             }
+            &__detail{
+                &-main{
+                    padding: 10px;
+                    .title{
+                        font-size: 32px;
+                        line-height: 36px;
+                        .close-product-detail{
+                            height: 30px;
+                            width: 30px;
+                            font-size: 16px;
+                        }
+                    }
+                    .content{
+                        font-size: 10px;
+                        line-height: 14px;
+                        margin-top: 12px;
+                        margin-bottom: 12px;
+                    }
+                    .bottom-btn{
+                        .--btn-df{
+                            width: initial;
+                            padding: 0 20px;
+                            margin-right: 10px;
+                            a{
+                                font-size: 12px;
+                                line-height: 16px;
+                            }
+                        }
+                    }
+                }
+            }
         }
+        
     }
     .choose{
         display: flex;
