@@ -521,9 +521,6 @@
             }
         }
     }
-    .network{
-        display: none;
-    }
     .hotproduct{
         .products{
             grid-template-columns: 410px;
@@ -621,14 +618,58 @@
         }
         
     }
+    .choose{
+        height: 420px;
+        margin-top: 120px;
+        background-size: auto;
+        .container{
+            padding-top: 60px;
+        }
+        .--textbox{
+            .title{
+                width: 190px;
+            }
+        }
+        .--btn-df{
+            margin-top: 30px;
+            width: 280px;
+                a{
+                    font-size: 20px;
+                    line-height: 30px;
+                }
+        }
+    }
+    .news{
+        .newslist{
+            grid-template-columns: repeat(2,1fr);
+            &__item{
+                &:last-child{
+                    transform: translateX(calc(50% + 15px));
+                }
+                &-text{
+                    .title{
+                        font-size: 30px;
+                        line-height: 32px;
+                        .other{
+                            font-size: 16px;
+                        }
+                        .short-view, .short-title{
+                            font-size: 12px;
+                            line-height: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .network{
+        height: 400px;
+    }
 }
 @include mobile{
     .main-wrapper.home{
         --h-slide: calc((100vw * 9) / 16);
-        .back-top{
-            right: 10px;
-            bottom: 20px;
-        }
+        
     }
     .slide{
         &__imgs{
@@ -690,6 +731,43 @@
             }
         }
     }
+    .choose{
+        height: 360px;
+    }
+    .news{
+        .newslist{
+            grid-template-columns: 1fr;
+            margin-top: 40px;
+            &__item{
+                &:last-child{
+                    transform: initial;
+                }
+                &-text{
+                    .title{
+                        font-size: 35px;
+                        line-height: 40px;
+                        .other{
+                            font-size: 20px;
+                        }
+                        .short-view, .short-title{
+                            font-size: 16px;
+                            line-height: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .network{
+        height: 340px;
+        .network__btn{
+            bottom: 30px;
+        }
+    }
+    .back-top{
+        right: 20px;
+        bottom: 20px;
+    }
 }
 @include mobile-xxs{
     .main-wrapper.home{
@@ -742,26 +820,75 @@
     }
     .hotproduct{
         .products{
-            grid-template-columns: 410px;
-            grid-template-rows: 606px;
+            grid-template-columns: 234px;
+            grid-template-rows: 346px;
             place-items: center;      
             margin-top: 40px;
             padding: initial;
             &__item{
-                height: 606px;
-                max-width: 410px;
+                height: 346px;
+                max-width: 234px;
                 width: 100%;
                 position: absolute;
                 &:nth-child(2){
                     left: initial;
+                    padding: 10px 20px;
                 }
-                &:nth-child(1){
-                    display: none;
-                }
-                &:nth-child(3){
-                    display: none;
+                .info{
+                    &__btn{
+                        a{
+                            font-size: 10px;
+                            line-height: 12px;
+                        }
+                    }
                 }
             }
+        }
+    }
+    .choose{
+        display: flex;
+        align-items: center;
+        background-size: contain;
+        height: 142px;
+        margin-top: 40px;
+        .container{
+            padding-top: initial;
+        }
+        .--btn-df{
+            margin-top: 10px;
+            width: 140px;
+                a{
+                    font-size: 10px;
+                    line-height: 15px;
+                }
+        }
+    }
+    .news{
+        .newslist{
+            padding: initial;
+            margin-top: 24px;
+            &__item{
+                &-text{
+                    .title{
+                        font-size: 30px;
+                        line-height: 32px;
+                        .other{
+                            font-size: 16px;
+                        }
+                        .short-view, .short-title{
+                            font-size: 12px;
+                            line-height: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .network{
+        height: 280px;
+        .network__btn{
+            bottom: 20px;
+            width: 100%;
         }
     }
 }
