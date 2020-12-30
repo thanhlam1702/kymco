@@ -2,13 +2,7 @@
 $(document).ready(function(){
     svgToInline('.icon-svg');
 })
-//handle modal product detail
-document.querySelectorAll('.products__item')[1].addEventListener('click', function(){
-    $('.products__detail').addClass('active');
-})
-document.querySelector('.close-product-detail').addEventListener('click',() =>{
-    $('.products__detail').removeClass('active');
-})
+
 //handle nav mobile
 $('.btn-menu').click(function(){
     console.log('object');
@@ -24,7 +18,7 @@ let prevScroll = window.pageYOffset;
 
 window.onscroll = function(){
     let currentScroll = window.pageYOffset;
-    if(currentScroll > banner.clientHeight){
+    if(currentScroll > 600){
         if(prevScroll < currentScroll){
             header.style.top = '-100px'
         }
@@ -34,7 +28,7 @@ window.onscroll = function(){
         }
         prevScroll = currentScroll;
         backTop.classList.add('active');
-        if(window.innerWidth > 992){
+        if(window.innerWidth > 450){
             header.style.background = '#f4352c'
         }
     }
@@ -42,7 +36,6 @@ window.onscroll = function(){
         header.style.background = 'none'
         backTop.classList.remove('active');
     }
-    
 }
 // back to top
 backTop.addEventListener('click', () =>{
