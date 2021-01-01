@@ -383,6 +383,7 @@
     transition: $t $cubic;
     @include hidden();
     cursor: pointer;
+    z-index: 100;
     .icon{
         height: 30px;
         width: 30px;

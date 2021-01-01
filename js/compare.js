@@ -16,3 +16,4 @@ accordion.forEach((item, index) => {
         }
     })
 })
+
