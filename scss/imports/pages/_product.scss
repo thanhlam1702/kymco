@@ -32,6 +32,7 @@
                 position: relative;
                 padding-left: 30px;
                 padding-right: 30px;
+                cursor: pointer;
                 @include text(50px, dinea, 54px, $text-gray, uppercase);
                 &:first-child{
                     padding-left: initial;
@@ -61,10 +62,16 @@
 
             }
         }
-        &__show{
+        .frame-product{
+            display: none;
             margin-top: 120px;
             margin-bottom: 120px;
             width: 100%;
+            &.active{
+                display: block;
+            }
+        }
+        &__show{
             &-item{
                 width: 100%;
                 height: 510px;
@@ -90,7 +97,7 @@
                     width: 90%;
                     height: 100%;
                     background: $cl-gray;
-                    transform: skewX(-10deg);
+                    transform: $skew-product;
                     position: absolute;
                     right: 0;
                     z-index: 1;
@@ -141,6 +148,8 @@
                     width: 100%;
                     margin-top: 40px;
                     display: flex;
+                    align-items: center;
+                    position: relative;
                     &__item{
                         width: 30%;
                         position: relative;
@@ -161,7 +170,7 @@
                             }
                             .price{
                                 font-size: 29px;
-                                list-style: 30px;
+                                line-height: 30px;
                             }
                         }
                         &-btn{
@@ -184,8 +193,304 @@
                             @include visible();
                         }
                     }
+                    &__control{
+                        position: absolute;
+                        background: $color-default;
+                        padding: 20px 0;
+                        padding-right: 40px;
+                        display: none;
+                        cursor: pointer;
+                        img{
+                            width: 40px;
+                            height: 40px;
+                            transition: $t $cubic;
+                        }
+                        &.-prev{
+                            transform: rotate(180deg) $skew-product;
+                            left: -30px;
+
+                        }
+                        &.-next{
+                            right: -30px;
+                            transform: $skew-product;
+                        }
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            height: 2px;
+                            width: 0;
+                            background: #fff;
+                            left: 0;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            transition: $t $cubic;
+                        }
+                        &.active{
+                            display: block;
+                        }
+                        &:hover > img{
+                            transform: translateX(30px);
+                            transition: $t $cubic;
+                        }
+                        &:hover::before{
+                            width: 50px;
+                            transition: $t $cubic;
+                        }
+                    
+                    }
                 }
             }
+        }
+        &__choosebike{
+            &-more{
+                columns: 2;
+                margin-top: 120px;
+                padding-bottom: 50px;
+                position: relative;
+                .type, .engine{
+                    display: flex;
+                    &__box{
+                        margin-right: 20px;
+                        margin-bottom: 4px;
+                    }
+                    &__box{
+                        &:first-child{
+                            border: none;
+                            font-size: 30px;
+                            line-height: 30px;
+                            align-items: center;
+                            cursor: initial;
+                            &:hover{
+                                color: $text-black;
+                                background: $text-white;
+                            }
+                        }
+                        
+                    }
+                }
+                .engine{
+                    .engine__box{
+                        &-text{
+                            font-size: 30px;
+                            line-height: 30px;
+                        }
+                        &-bang{
+                            font-size: 60px;
+                            line-height: 40px;
+                        }
+                        &-other{
+                            font-size: 18px;
+                            line-height: 20px;
+                        }
+                    }
+                }
+                &::before{
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 2px;
+                    background: #cccccc;
+                }
+            }
+            &-price{
+                .--textbox{
+                    margin-top: 40px;
+                    .title{
+                        font-size: 30px;
+                        line-height: 32px;
+                    }
+                    .description{
+                        font-size: 18px;
+                        line-height: 20px;
+                    }
+                }
+                .range{
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 40px;
+                    padding-bottom: 50px;
+                    position: relative;
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 2px;
+                        background: #cccccc;
+                    }
+                    &__limit{
+                        display: flex;
+                        flex-direction: column;
+                        @include text(30px, dinea, 32px, $text-black, uppercase);
+                        .price{
+                            font-size: 40px;
+                            line-height: 42px;
+                        }
+                        &:last-child{
+                            text-align: end;
+                        }
+                    }
+                    &__main{
+                        width: 540px;
+                        position: relative;
+                        margin: auto;
+                        &-slide{
+                            position: relative;
+                            height: 2px;
+                            margin: 0 12px;
+                            .track{
+                                position: absolute;
+                                left: 0;
+                                right: 0;
+                                top: 0;
+                                bottom: 0;
+                                background: #000;
+                            }
+                            .thumb{
+                                position: absolute;
+                                width: 24px;
+                                height: 24px;
+                                border-radius: 50%;
+                                background: #b41710;
+                                z-index: 3;
+                                box-shadow: none;
+                                transition: box-shadow $t;
+                                &.active{
+                                    box-shadow: 0 0 0 10px $color-default;
+                                    transition: box-shadow $t;
+                                }
+                                &.hover{
+                                    box-shadow: 0 0 0 10px $color-default;
+                                    transition: box-shadow $t;
+                                }
+                            }
+                            .left{
+                                left: 0%;
+                                transform: translate(-12px, -10px);
+                            }
+                            .right{
+                                right: 0%;
+                                transform: translate(12px, -10px);
+                            }
+                        }
+                        input[type=range]{
+                            position: absolute;
+                            pointer-events: none;
+                            -webkit-appearance: none;
+                            width: 100%;
+                            height: 10px;
+                            z-index: 4;
+                            cursor: col-resize;
+                            opacity: 0;
+                        }
+                        input[type=range]::-webkit-slider-thumb{
+                            width: 24px;
+                            height: 24px;
+                            border-radius: 0;
+                            border: 0 none;
+                            background-color: blue;
+                            -webkit-appearance: none;
+                            pointer-events: all;
+                        }
+                    }
+
+                }
+            }
+            &-gender{
+                .--textbox{
+                    margin-top: 40px;
+                    .title{
+                        font-size: 30px;
+                        line-height: 32px;
+                    }
+                }
+                .gender{
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 20px;
+                    &__box{
+                        margin: 0 10px;
+                    }
+                }
+                .search{
+                    margin-top: 40px;
+                    .--text-box{
+                        margin: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+.popup-modal{
+    height: 100vh;
+    width: 100vw;
+    background: rgba(40, 40, 40, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 333;
+    place-items: center;
+    display: grid;
+    transition: $t $cubic;
+    @include hidden();
+    &.active{
+        @include visible();
+    }
+    .popup{
+        height: 250px;
+        width: 868px;
+        background: $color-default;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        // transform: $skew-product;
+        transition: $t $cubic;
+        @include hidden();
+        &.active{
+            transition: $t $cubic;
+            transform: $skew-product;
+            @include visible();
+        }
+        &__mess{
+            width: 100%;
+            text-align: center;
+            @include text(22px, dinea, 24px, $text-white, uppercase);
+        }
+        &__button{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+            transform: skewX(10deg);
+            a{
+                font-size: 22px;
+                line-height: 24px;
+                color: $color-default;
+                background: $text-white;
+                width: max-content;
+                padding: 8px 20px;
+                margin: 20px;
+            }
+        }
+        &__close{
+            position: absolute;
+            right: 0;
+            top: 0;
+            transform: translate(50%, -20%);
+            height: 60px;
+            width: 60px;
+            cursor: pointer;
+            background: $text-white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include text(40px, dinea, 40px, $color-default, uppercase);
         }
     }
 }

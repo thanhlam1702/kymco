@@ -116,7 +116,7 @@
                 <li class="content__nav-item active">tất cả sản phẩm</li>
                 <li class="content__nav-item">Chọn xe theo nhu cầu</li>
             </ul>
-            <div class="content__show">
+            <div class="content__show frame-product active">
                 <div class="content__show-item">
                     <div class="img">
                         <img src="img/product-like.png" alt="">
@@ -148,7 +148,7 @@
                                     <a class="btn-main" href="#more">
                                         Xem chi tiết
                                     </a>
-                                    <a class="btn-main" href="#more">
+                                    <a class="btn-main so-sanh" href="#more">
                                         So sánh xe
                                     </a>
                                 </div>
@@ -168,7 +168,7 @@
                                     <a class="btn-main" href="#more">
                                         Xem chi tiết
                                     </a>
-                                    <a class="btn-main" href="#more">
+                                    <a class="btn-main so-sanh" href="#more">
                                         So sánh xe
                                     </a>
                                 </div>
@@ -188,11 +188,17 @@
                                     <a class="btn-main" href="#more">
                                         Xem chi tiết
                                     </a>
-                                    <a class="btn-main" href="#more">
+                                    <a class="btn-main so-sanh" href="#more">
                                         So sánh xe
                                     </a>
                                 </div>
                             </div>
+                            <i class="-prev listmore__control">
+                                <img src="img/right-arrow.svg" alt="">
+                            </i>
+                            <i class="-next listmore__control active">
+                                <img src="img/right-arrow.svg" alt="">
+                            </i>
                         </div>
                     </div>
                 </div>
@@ -227,7 +233,7 @@
                                     <a class="btn-main" href="#more">
                                         Xem chi tiết
                                     </a>
-                                    <a class="btn-main" href="#more">
+                                    <a class="btn-main so-sanh" href="#more">
                                         So sánh xe
                                     </a>
                                 </div>
@@ -247,7 +253,7 @@
                                     <a class="btn-main" href="#more">
                                         Xem chi tiết
                                     </a>
-                                    <a class="btn-main" href="#more">
+                                    <a class="btn-main so-sanh" href="#more">
                                         So sánh xe
                                     </a>
                                 </div>
@@ -286,12 +292,128 @@
                                     <a class="btn-main" href="#more">
                                         Xem chi tiết
                                     </a>
-                                    <a class="btn-main" href="#more">
+                                    <a class="btn-main so-sanh" href="#more">
                                         So sánh xe
                                     </a>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content__choosebike frame-product">
+                <div class="content__choosebike-title">
+                    <div class="--textbox">
+                        <div class="title">
+                            Chọn xe theo yêu cầu
+                        </div>
+                        <div class="description">
+                            Giúp bạn dễ dàng hơn trong việc lựa chọn chiếc xe phù hợp.
+                        </div>
+                    </div>
+                </div>
+                <div class="content__choosebike-more">
+                    <div class="type">
+                        <div class="type__box choose-box">
+                            <span class="choose-box__text">Loại xe</span>
+                        </div>
+                        <div class="type__box choose-box">
+                            <i class="icon">
+                                <img class="icon-svg" src="img/nhap-khau.svg" alt="" >
+                            </i>
+                            <span class="choose-box__text">Nhập khẩu</span>
+                        </div>
+                        <div class="type__box choose-box">
+                            <i class="icon">
+                                <img class="icon-svg" src="img/xe-ga.svg" alt="">
+                            </i>
+                            <span class="choose-box__text">Xe ga</span>
+                        </div>
+                        <div class="type__box choose-box">
+                            <i class="icon">
+                                <img class="icon-svg" src="img/xe-so.svg" alt="" >
+                            </i>
+                            <span class="choose-box__text">Xe số</span>
+                        </div>
+                    </div>
+                    <!-- -->
+                    <div class="engine right">
+                        <div class="engine__box choose-box">
+                            <span class="choose-box__text">Động cơ</span>
+                        </div>
+                        <div class="engine__box choose-box">
+                            <span class="choose-box__text">bằng</span>
+                            <span class="engine__box-bang">a1</span>
+
+                        </div>
+                        <div class="engine__box choose-box">
+                            <span class="choose-box__text">bằng</span>
+                            <span class="engine__box-bang">a2</span>
+
+                        </div>
+                        <div class="engine__box choose-box">
+                            <span class="choose-box__text">Không</span>
+                            <span class="engine__box-other">cần bằng lái</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="content__choosebike-price">
+                    <div class="--textbox">
+                        <div class="title">
+                            Giá tiền
+                        </div>
+                        <div class="description">
+                            Tuỳ chọn giá tiền giữa mức tối thiểu và tối đa 
+                        </div>
+                    </div>
+                    <div class="range">
+                        <div class="range__limit">
+                            <span>Tối thiểu</span>
+                            <span class="price min">
+                                13.500.000 VNĐ
+                            </span>
+                        </div>
+                        <div class="range__main">
+                            <input type="range" name="" id="input-left" min="0" max="100" value="0">
+                            <input type="range" name="" id="input-right" min="0" max="100" value="100">
+                            <div class="range__main-slide">
+                                <div class="track"></div>
+                                <div class="thumb left"></div>
+                                <div class="thumb right"></div>
+                            </div>
+                        </div>
+                        <div class="range__limit">
+                            <span>Tối đa</span>
+                            <span class="price max">
+                                117.000.000 VNĐ
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="content__choosebike-gender">
+                    <div class="--textbox">
+                        <div class="title">
+                            Kiểu dáng xe
+                        </div>
+                    </div>
+                    <div class="gender">
+                        <div class="gender__box choose-box">
+                            <i class="icon">
+                                <img class="icon-svg" src="img/men.svg" alt="" >
+                            </i>
+                            <span class="choose-box__text">Xe nam</span>
+                        </div>
+                        <div class="gender__box choose-box">
+                            <i class="icon">
+                                <img class="icon-svg" src="img/women.svg" alt="" >
+                            </i>
+                            <span class="choose-box__text">Xe nữ</span>
+                        </div>
+                    </div>
+                    <div class="search">
+                        <a href="#tim" class="btn-main">
+                            tìm kiếm sản phẩm
+                        </a>
                     </div>
                 </div>
             </div>
@@ -335,6 +457,20 @@
         <i class="icon">
             <img src="img/right-arrow.svg" alt="">
         </i>
+    </div>
+    <div class="popup-modal">
+        <div class="popup">
+            <div class="popup__mess"> candy hi 50 vừa được thêm vào danh sách so sánh</div>
+            <div class="popup__button">
+                <a href="/compare.html" class="btn-main compare">
+                    Xem so sánh
+                </a>
+                <a href="#" class="btn-main">
+                    Thêm sản phẩm khác
+                </a>
+            </div>
+            <div class="popup__close">x</div>
+        </div>
     </div>
     <script type="text/javascript" src="dest/jsmain.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>

@@ -373,8 +373,8 @@
     position: fixed;
     bottom: 40px;
     right: 60px;
-    height: 40px;
-    width: 40px;
+    height: 60px;
+    width: 60px;
     background: $color-default;
     border-radius: 50%;
     display: grid;
@@ -384,8 +384,13 @@
     @include hidden();
     cursor: pointer;
     .icon{
-        height: 16px;
-        width: 16px;
+        height: 30px;
+        width: 30px;
+        transition: $t $cubic;
+    }
+    &:hover > .icon{
+        transform: rotateX(45deg);
+        transition: $t $cubic;
     }
     &.active{
         transition: $t $cubic;
@@ -535,16 +540,6 @@
                 }
                 &:nth-child(3){
                     display: none;
-                }
-                img{
-                }
-                .info{
-                    &__text{
-                        span{
-                        }
-                        .size{
-                        }
-                    }
                 }
             }
             &__detail{

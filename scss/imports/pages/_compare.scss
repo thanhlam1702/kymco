@@ -1,0 +1,129 @@
+.main-wrapper.compare{
+    .banner{
+        height: 524px;
+        width: 100%;
+        &__img{
+            height: 100%;
+            width: 100%;
+            position: relative;
+            img{
+                object-fit: cover;
+                @include mid();
+            }
+        }
+    }
+}
+.comparebike{
+    .--textbox{
+        margin-bottom:  60px;
+    }
+    &__main{
+        width: 100%;
+        height: 370px;
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 549px 1fr;
+        align-items: center;
+        &::before{
+            content: '';
+            position: absolute;
+            width: 1300px;
+            height: 100%;
+            background: $cl-gray;
+            left: 50%;
+            transform: $skew-product translateX(-50%);
+            z-index: -1;
+        }
+        &-title{
+            transform: $skew-product;
+            @include text(35px, dinea, 37px, $text-black, uppercase);
+        }
+        .listmore{
+            width: 540px;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            grid-gap: 30px;
+            position: relative;
+            &__item{
+                width: 100%;
+                &-name{
+                    @include text(25px, dinea, 27px, $text-black, uppercase);
+                }
+                &-img{
+                    width: 100%;
+                    height: 150px;
+                }
+                &-price{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    position: relative;
+                    padding-left: 10px;
+                    @include text(15px, dinea, 17px, $text-black, uppercase);
+                    .price{
+                        font-size: 34px;
+                        line-height: 36px;
+                    }
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        width: 2px;
+                        height: calc(100% - 4px);
+                        left: 0px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        background: $text-black;
+                    }
+                }
+                &-btn{
+                    width: 100%;
+                    display: flex;
+                    .btn-main{
+                        width: initial;
+                        font-size: 18px;
+                        line-height: 20px;
+                        padding: 8px 20px;
+                        margin-top: 20px;
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+        &-choosemore{
+            .text{
+                height: 200px;
+                width: 200px;
+                border: 1px dashed $color-default;
+                margin: auto;
+                display: grid;
+                place-items: center;
+                cursor: pointer;
+                @include text(30px, dinea, 32px, $color-default, uppercase);
+            }
+        }
+    }
+}
+.infocompare{
+    margin-top: 110px;
+    &__content{
+        margin: 110px 0;
+        .accordion{
+            &__content{
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                &-item{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    @include text(18px, avo, 20px, $text-black, initial);
+                    span{
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
