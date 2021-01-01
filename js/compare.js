@@ -11,9 +11,18 @@ accordion.forEach((item, index) => {
             document.querySelectorAll('.icon-plus')[index].classList.remove('active')
 
         } else {
-            panel.style.maxHeight = panel.scrollHeight + "px";
+            panel.style.maxHeight = (panel.scrollHeight + 8) + "px";
             document.querySelectorAll('.icon-plus')[index].classList.add('active')
         }
     })
 })
 
+//flickity slide compare 
+
+$('.listmore').flickity({
+    cellAlign: 'left',
+    contain: true,
+    prevNextButtons: false,
+    pageDots: false,
+    freeScroll: true,
+})

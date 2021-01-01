@@ -1,3 +1,13 @@
+.btn-main{
+    background: $color-default;
+    padding: 10px 0;
+    width: 356px;
+    display: block;
+    text-align: center;
+    letter-spacing: 0.4px;
+    border-radius: 50px;
+    @include text(25px, dinea, 40px, $text-white, uppercase);
+}
 .--textbox{
     width: 100%;
     .title{
@@ -10,16 +20,107 @@
         margin-top: 24px;
         @include text(22px, avo, 25px, $text-black, initial);
     }
-}  
-.btn-main{
-    background: $color-default;
-    padding: 10px 0;
-    width: 356px;
-    display: block;
-    text-align: center;
-    letter-spacing: 0.4px;
-    border-radius: 50px;
-    @include text(25px, dinea, 40px, $text-white, uppercase);
+} 
+.showlist{
+    height: 460px;
+    align-items: center;
+    &__text{
+        z-index: 20;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: initial;
+        .title{
+            &::before{
+                content: "";
+                width: 290px;
+                height: 2px;
+                background: $text-black;
+                position: absolute;
+                top: 200px;
+                left: 0;
+            }
+        }
+        .description{
+            text-align: start;
+        }
+    }
+    &__slide{
+        position: absolute;
+        right: 0;
+        height: 460px;
+        padding-right: initial;
+        &-imgs{
+            height: 100%;
+            .item{
+                overflow: hidden;
+                height: 100%;
+                img{
+                    object-fit: cover;
+                    @include mid();
+                }
+            }
+        }
+        &-control{
+            background: $color-default;
+            display: flex;
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            transform: translateX(-50%);
+            .icon{
+                height: 26px;
+                width: 14px;
+                padding: 20px;
+                box-sizing: content-box;
+                cursor: pointer;
+            }
+            .--prev{
+                transform: rotate(180deg);
+            }
+            &::before{
+                content: "";
+                width: 1px;
+                height: 50%;
+                background: #fff;
+                @include mid();
+            }
+        }
+    }
+}
+.choose{
+    height: 652px;
+    width: 100%;
+    margin-top: 120px;
+    position: relative;
+    .container{
+        padding-top: 130px;
+    }
+    .--textbox{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        .title{
+            width: 250px;
+            text-align: start;
+        }
+    }
+    .btn-main{
+        margin-top: 46px;
+        font-size: 25px;
+        line-height: 40px;
+    }
+    &__bg{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        img{
+            object-fit: cover;
+        }
+    }
 }
 .choose-box{
     height: 104px;
@@ -114,9 +215,103 @@
             font-size: 18px;
             line-height: 20px;
         }
-    }  
+    }
+    .showlist{
+        height: 380px;
+        &__text{
+            .title{
+                &::before{
+                    width: 200px;
+                }
+            }
+        }
+        &__slide{
+            height: 380px;
+            &-control{
+                .icon{
+                    height: 24px;
+                    width: 18px;
+                    padding: 10px;
+                }
+            }
+        }
+    } 
+    .choose{
+        height: 420px;
+        .container{
+            padding-top: 60px;
+        }
+        .--textbox{
+            .title{
+                width: 190px;
+            }
+        }
+        .btn-main{
+            margin-top: 30px;
+            width: 280px;
+            font-size: 20px;
+            line-height: 30px;
+        }
+    }
+}
+@include mobile{
+    .showlist{
+        height: initial;
+        margin-left: initial;
+        margin-right: initial;
+        &__text{
+            padding-left: initial;
+            padding-right: initial;
+            .title{
+                &::before{
+                    top: 100px;
+                }
+            }
+        }
+        &__slide{
+            margin-top: 20px;
+            position: relative;
+            height: 250px;
+            &-control{
+                transform: initial;
+                .icon{
+                    height:32px;
+                    width: 20px;
+                    padding: 10px;
+                }
+            }
+        }
+    }
+    .choose{
+        height: 360px;
+    }
+    .accordion{
+        &__title{
+            font-size: 28px;
+            line-height: 30px;
+            .icon-plus{
+                &::before, &::after{
+                    content: '';
+                    position: absolute;
+                    height: 3px;
+                    width: 21px;
+                }
+            }
+        }
+        
+    }
 }
 @include mobile-xxs{
+    .btn-main{
+        max-width: 356px;
+        width: 100%;
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+    .choose-box{
+        height: 80px;
+        width: 80px;
+    }
     .--textbox{
         .title{
             font-size: 24px;
@@ -128,14 +323,42 @@
             margin-top: 10px;
         }
     }
-    .btn-main{
-        max-width: 356px;
-        width: 100%;
-        padding-top: 4px;
-        padding-bottom: 4px;
+    .showlist{
+        &__text{
+            .title{
+                &::before{
+                    top: 40px;
+                    height: 1px;
+                    left: -50%;
+                }
+            }
+        }
+        &__slide{
+            height: 180px;
+            &-control{
+                .icon{
+                    height:20px;
+                    width: 30px;
+                    padding: 14px 10px;
+                }
+            }
+        }
     }
-    .choose-box{
-        height: 80px;
-        width: 80px;
+    .choose{
+        display: flex;
+        align-items: center;
+        background-size: contain;
+        height: 220px;
+        margin-top: 40px;
+        .container{
+            padding-top: initial;
+        }
+        .btn-main{
+            margin-top: 10px;
+            width: 140px;
+            font-size: 10px;
+            line-height: 15px;
+        }
     }
+    
 }

@@ -75,73 +75,6 @@
 }
 .mission{
     position: relative;
-    .row{
-        height: 460px;
-        align-items: center;
-    }
-    &__text{
-        z-index: 20;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        position: initial;
-        .title{
-            &::before{
-                content: "";
-                width: 290px;
-                height: 2px;
-                background: $text-black;
-                position: absolute;
-                top: 200px;
-                left: 0;
-            }
-        }
-        .description{
-            text-align: start;
-        }
-    }
-    &__slide{
-        position: absolute;
-        right: 0;
-        height: 460px;
-        padding-right: initial;
-        &-imgs{
-            height: 100%;
-            .item{
-                overflow: hidden;
-                height: 100%;
-                img{
-                    object-fit: cover;
-                    @include mid();
-                }
-            }
-        }
-        &-control{
-            background: $color-default;
-            display: flex;
-            position: absolute;
-            bottom: -1px;
-            left: 0;
-            transform: translateX(-50%);
-            .icon{
-                height: 26px;
-                width: 14px;
-                padding: 20px;
-                box-sizing: content-box;
-                cursor: pointer;
-            }
-            .--prev{
-                transform: rotate(180deg);
-            }
-            &::before{
-                content: "";
-                width: 1px;
-                height: 50%;
-                background: #fff;
-                @include mid();
-            }
-        }
-    }
 }
 .hotproduct{
     .products{
@@ -260,31 +193,6 @@
         }
     }
     
-}
-.choose{
-    background: url("../img/banner-see-more.jpg") no-repeat center;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 652px;
-    width: 100%;
-    margin-top: 120px;
-    .container{
-        padding-top: 130px;
-    }
-    .--textbox{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        .title{
-            width: 250px;
-            text-align: start;
-        }
-    }
-    .btn-main{
-        margin-top: 46px;
-        font-size: 25px;
-        line-height: 40px;
-    }
 }
 .news{
     .newslist{
@@ -501,28 +409,6 @@
             }
         }
     }
-    .mission{
-        .row{
-            height: 380px;
-        }
-        &__text{
-            .title{
-                &::before{
-                    width: 200px;
-                }
-            }
-        }
-        &__slide{
-            height: 380px;
-            &-control{
-                .icon{
-                    height: 24px;
-                    width: 18px;
-                    padding: 10px;
-                }
-            }
-        }
-    }
     .hotproduct{
         .products{
             grid-template-columns: 410px;
@@ -561,25 +447,7 @@
         }
         
     }
-    .choose{
-        height: 420px;
-        margin-top: 120px;
-        background-size: auto;
-        .container{
-            padding-top: 60px;
-        }
-        .--textbox{
-            .title{
-                width: 190px;
-            }
-        }
-        .btn-main{
-            margin-top: 30px;
-            width: 280px;
-            font-size: 20px;
-            line-height: 30px;
-        }
-    }
+    
     .news{
         .newslist{
             grid-template-columns: repeat(2,1fr);
@@ -643,38 +511,7 @@
             }
         }
     }
-    .mission{
-        .row{
-            height: initial;
-            margin-left: initial;
-            margin-right: initial;
-        }
-        &__text{
-            padding-left: initial;
-            padding-right: initial;
-            .title{
-                &::before{
-                    top: 100px;
-                }
-            }
-        }
-        &__slide{
-            margin-top: 20px;
-            position: relative;
-            height: 250px;
-            &-control{
-                transform: initial;
-                .icon{
-                    height:32px;
-                    width: 20px;
-                    padding: 10px;
-                }
-            }
-        }
-    }
-    .choose{
-        height: 360px;
-    }
+    
     .news{
         .newslist{
             grid-template-columns: 1fr;
@@ -741,27 +578,6 @@
             }
         }
     }
-    .mission{
-        &__text{
-            .title{
-                &::before{
-                    top: 40px;
-                    height: 1px;
-                    left: -50%;
-                }
-            }
-        }
-        &__slide{
-            height: 180px;
-            &-control{
-                .icon{
-                    height:20px;
-                    width: 30px;
-                    padding: 14px 10px;
-                }
-            }
-        }
-    }
     .hotproduct{
         .products{
             grid-template-columns: 234px;
@@ -820,22 +636,7 @@
         }
         
     }
-    .choose{
-        display: flex;
-        align-items: center;
-        background-size: contain;
-        height: 142px;
-        margin-top: 40px;
-        .container{
-            padding-top: initial;
-        }
-        .btn-main{
-            margin-top: 10px;
-            width: 140px;
-            font-size: 10px;
-            line-height: 15px;
-        }
-    }
+    
     .news{
         .newslist{
             padding: initial;
