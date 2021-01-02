@@ -1,4 +1,3 @@
-// compare page
 // handle accordion
 
 let accordion = document.querySelectorAll('.accordion__title')
@@ -8,23 +7,11 @@ accordion.forEach((item, index) => {
         let panel = document.querySelectorAll('.accordion__content')[index]
         if (panel.style.maxHeight) {
             panel.style.maxHeight = null;
-            document.querySelectorAll('.accordion__content')[index].classList.remove('active')
             document.querySelectorAll('.icon-plus')[index].classList.remove('active')
 
         } else {
-            document.querySelectorAll('.accordion__content')[index].classList.add('active')
             panel.style.maxHeight = (panel.scrollHeight + 8) + "px";
             document.querySelectorAll('.icon-plus')[index].classList.add('active')
         }
     })
-})
-
-//flickity slide compare 
-
-$('.listmore').flickity({
-    cellAlign: 'left',
-    contain: true,
-    prevNextButtons: false,
-    pageDots: false,
-    freeScroll: true,
 })

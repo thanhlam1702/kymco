@@ -50,11 +50,15 @@
         right: 0;
         height: 460px;
         padding-right: initial;
+        padding-left: initial;
         &-imgs{
             height: 100%;
+            width: 100%;
             .item{
                 overflow: hidden;
                 height: 100%;
+                position: relative;
+                width: 100%;
                 img{
                     object-fit: cover;
                     @include mid();
@@ -158,6 +162,7 @@
 }
 .accordion{
     width: 100%;
+    margin-bottom: 40px;
     &__title{
         display: flex;
         align-items: flex-end;
@@ -197,13 +202,27 @@
         }
     }
     &__content{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
         max-height: 0;
         overflow: hidden;
-        transition: max-height $t $cubic;
-        margin-top: 40px;
-        margin-bottom: 40px;
+        transition: max-height $t $cubic, margin $t $cubic;
+        &-item{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            @include text(18px, avo, 20px, $text-black, initial);
+            span{
+                margin-top: 20px;
+            }
+        }
+        &.active{
+            margin-top: 40px;
+            margin-bottom: 40px;
+            transition: max-height $t $cubic, margin $t $cubic;
+        }
     }
-    
 }
 @include tablet{
     .--textbox{
@@ -253,6 +272,13 @@
             line-height: 30px;
         }
     }
+    .accordion{
+        &__content{
+            grid-template-columns: repeat(4, 320px);
+            overflow-x: auto;
+            @include custom-scrollbar-2();
+        }
+    }
 }
 @include mobile{
     .showlist{
@@ -297,6 +323,19 @@
                     width: 21px;
                 }
             }
+        }
+        &__content{
+            grid-template-columns: repeat(4, 220px);
+            margin-top: 20px;
+            margin-bottom: 20px;
+            &-item{
+                font-size: 14px;
+                line-height: 16px;
+                span{
+                    margin-top: 16px;
+                }
+            }
+            
         }
         
     }
