@@ -43,8 +43,7 @@
         &__bike{
             position: absolute;
             left: 50%;
-            max-width: 1200px;
-            width: 100%;
+            width: 68%;
             bottom: 0px;
             transform: translateX(-50%);
         }
@@ -129,8 +128,27 @@
             }
         }
     }
-    .feature{
-        position: relative;
+}
+.feature{
+    position: relative;
+    .showlist{
+        margin-top: 70px;
+        .title{
+            font-size: 35px;
+            line-height: 37px;
+            .paging{
+                position: absolute;
+                top: -100px;
+                left: 0;
+                @include text(38px, dinea, 40px, #999999, uppercase);                    
+                &__current{
+                    font-size: 74px;
+                    line-height: 74px;
+                    color: $text-black;
+                }
+            }
+            
+        }
     }
 }
 .bikeintro{
@@ -150,6 +168,220 @@
         span{
             display: block;
             margin-top: 40px;
+        }
+    }
+}
+
+@include desktop{
+    .main-wrapper.product-detail{
+        .banner{
+            height: calc((100vw * 9) / 16);
+        }
+        .info{
+            &__detail{
+                flex-direction: column-reverse;
+                &-img{
+                    width: 100%;
+                    max-width: 780px;
+                    margin-left: initial;
+                    margin: auto;
+                }
+                &-content{
+                    width: 100%;
+                    padding-left: initial;
+                }
+            }
+        }
+    }
+}
+@include tablet{
+    .main-wrapper.product-detail{
+        .banner{
+            &__btn360{
+                width: 60px;
+                height: 60px;
+            }
+            &__choosecolor{
+                .cl{
+                    height: 40px;
+                    width: 40px;
+                }
+            }
+        }
+        .info{
+            margin-top: 40px;
+            padding-bottom: 80px;
+            &__title{
+                padding-top: 40px;
+                padding-bottom: 80px;
+                &-price{
+                    font-size: 60px;
+                    line-height: 62px;
+                }
+            }
+            &__detail{
+                &-img{
+                    height: 460px;
+                }
+            }
+        }
+    }
+    .bikeintro{
+        &__title{
+            font-size: 60px;
+        }
+        &__short{
+            font-size: 24px;
+            line-height: 24px;
+        }
+        &__description{
+            font-size: 16px;
+            line-height: 16px;
+            span{
+                margin-top: 20px;
+            }
+        }
+    }
+}
+@include mobile{
+    .main-wrapper.product-detail{
+        .banner{
+            &__btn360{
+                width: 40px;
+                height: 40px;
+            }
+            &__choosecolor{
+                .cl{
+                    height: 28px;
+                    width: 28px;
+                    margin: 0 4px;
+                }
+            }
+        }
+        .info{
+            margin-top: 40px;
+            padding-bottom: 80px;
+            &__title{
+                padding-top: 30px;
+                padding-bottom: 60px;
+                &-price{
+                    font-size: 40px;
+                    line-height: 42px;
+                }
+            }
+            &__detail{
+                &-img{
+                    height: 400px;
+                }
+            }
+        }
+    }
+    .bikeintro{
+        &__title{
+            font-size: 50px;
+        }
+        &__short{
+            display: flex;
+            flex-direction: column;
+        }
+        &__description{
+            width: 100%;
+        }
+    }
+    .feature{
+        .showlist{
+            flex-direction: column-reverse;
+            .--textbox{
+                margin-top: 90px;
+            }
+            .title{
+                font-size: 28px;
+                line-height: 30px;
+                .paging{
+                    top: -60px;
+                    font-size: 24px;
+                    line-height: 26px;
+                    &__current{
+                        font-size: 34px;
+                        line-height: 36px;
+                    }
+                }
+            }
+            &__slide{
+                &-control{
+                    right: 0;
+                    left: initial;
+                }
+            }
+        }
+    }
+}
+@include mobile-xxs{
+    .main-wrapper.product-detail{
+        .banner{
+            margin-bottom: 30px;
+            &__btn360{
+                width: 18px;
+                height: 18px;
+            }
+            &__bike{
+                width: 80%;
+            }
+            &__choosecolor{
+                bottom: -30px;
+                .cl{
+                    height: 18px;
+                    width: 18px;
+                }
+            }
+        }
+        .info{
+            padding-bottom: 60px;
+            &__title{
+                font-size: 20px;
+                line-height: 22px;
+                padding-bottom: 40px;
+                &-price{
+                    font-size: 30px;
+                }
+            }
+            &__detail{
+                &-img{
+                    height: 260px;
+                }
+                &-content{
+                    .detail{
+                        margin-top: 20px;
+                        .accordion__title{
+                            font-size: 20px;
+                            line-height: 22px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .bikeintro{
+        &__title{
+            font-size: 28px;
+            line-height: 60px;
+        }
+        &__short{
+            font-size: 18px;
+            line-height: 20px;
+        }
+        &__description{
+            font-size: 12px;
+            line-height: 14px;
+        }
+    }
+    .feature{
+        .showlist{
+            margin-top: 20px;
+            .title{
+                font-size: 22px;
+                line-height: 24px;
+            }
         }
     }
 }

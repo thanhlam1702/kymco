@@ -31,13 +31,15 @@
         align-items: flex-start;
         position: initial;
         .title{
+            position: relative;
             &::before{
                 content: "";
                 width: 290px;
                 height: 2px;
                 background: $text-black;
                 position: absolute;
-                top: 200px;
+                top: -20px;
+                transform: translateX(-80%);
                 left: 0;
             }
         }
@@ -288,11 +290,6 @@
         &__text{
             padding-left: initial;
             padding-right: initial;
-            .title{
-                &::before{
-                    top: 100px;
-                }
-            }
         }
         &__slide{
             margin-top: 20px;
@@ -312,6 +309,7 @@
         height: 360px;
     }
     .accordion{
+        margin-bottom: 20px;
         &__title{
             font-size: 28px;
             line-height: 30px;
@@ -399,5 +397,10 @@
             line-height: 15px;
         }
     }
-    
+    .accordion{
+        &__content{
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    }
 }
