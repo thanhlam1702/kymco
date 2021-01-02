@@ -107,22 +107,6 @@
     margin-top: 110px;
     &__content{
         margin: 110px 0;
-        .accordion{
-            &__content{
-                width: 100%;
-                display: grid;
-                grid-template-columns: repeat(4, 1fr);
-                &-item{
-                    display: flex;
-                    flex-direction: column;
-                    align-items: flex-start;
-                    @include text(18px, avo, 20px, $text-black, initial);
-                    span{
-                        margin-top: 20px;
-                    }
-                }
-            }
-        }
     }
 }
 @include desktop{
@@ -154,19 +138,6 @@
         margin-top: 80px;
         &__content{
             margin: 80px 0;
-        }
-    }
-}
-@include tablet{
-    .infocompare{
-        &__content{
-            .accordion{
-                &__content{
-                    grid-template-columns: repeat(4, 320px);
-                    overflow-x: auto;
-                    @include custom-scrollbar-2();
-                }
-            }
         }
     }
 }
@@ -215,20 +186,6 @@
         margin-top: 60px;
         &__content{
             margin: 60px 0;
-            .accordion{
-                &__content{
-                    grid-template-columns: repeat(4, 220px);
-                    margin-top: 20px;
-                    margin-bottom: 20px;
-                    &-item{
-                        font-size: 14px;
-                        line-height: 16px;
-                        span{
-                            margin-top: 16px;
-                        }
-                    }
-                }
-            }
         }
     }
 }

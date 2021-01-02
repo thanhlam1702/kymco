@@ -28,3 +28,28 @@ window.onscroll = function(){
     }
     
 }
+
+//slide 
+
+$('.showlist__slide-imgs').flickity({
+    // cellAlign: 'left',
+    contain: true,
+    prevNextButtons: false,
+    pageDots: false,
+    wrapAround: true,
+    autoPlay: 3000,
+    selectedAttraction: 0.01,
+    friction: 0.15,
+    on: {
+        change : function(index){
+            // console.log(index);
+        }
+    }
+})
+
+$('.icon.--next').on( 'click', function() {
+    $('.showlist__slide-imgs').flickity('next');
+});
+$('.icon.--prev').on( 'click', function() {
+    $('.showlist__slide-imgs').flickity('previous');
+});

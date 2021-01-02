@@ -663,6 +663,11 @@
             }
         }
     }
+    .popup-modal{
+        .popup{
+            width: 600px;
+        }
+    }
 }
 @include mobile{
     .main-wrapper.product{
@@ -732,6 +737,31 @@
     
                     }
                 }
+            }
+        }
+    }
+    .popup-modal{
+        .popup{
+            width: 440px;
+            height: 200px;
+            &__mess{
+                font-size: 16px;
+                line-height: 18px;
+            }
+            &__button{
+                margin-top: 20px;
+                a{
+                    font-size: 16px;
+                    line-height: 18px;
+                    padding: 4px 10px;
+                    margin: 0 10px;
+                }
+            }
+            &__close{
+                height: 40px;
+                width: 40px;
+                font-size: 32px;
+                line-height: 32px;
             }
         }
     }
@@ -832,6 +862,26 @@
     
                     }
                 }
+            }
+        }
+    }
+    .popup-modal{
+        .popup{
+            width: 280px;
+            height: 140px;
+            &__mess{
+                font-size: 14px;
+                line-height: 16px;
+            }
+            &__button{
+                a{
+                    font-size: 12px;
+                    line-height: 14px;
+                }
+            }
+            &__close{
+                font-size: 26px;
+                line-height: 28px;
             }
         }
     }
