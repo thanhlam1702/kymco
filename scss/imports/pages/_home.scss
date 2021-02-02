@@ -2,7 +2,6 @@
     //
     --h-slide: 100vh;
     .btn{
-        width: 100%;
         display: flex;
         justify-content: center;
         margin-top: 80px;
@@ -60,7 +59,7 @@
         }
         &-paging{
             span{
-                padding: 26px;
+                padding: 12px;
                 @include text(48.44px,dinea, 34.51px, #baa697, none);
             }
             .page-here, .slash{
@@ -72,9 +71,6 @@
            
         }
     }
-}
-.mission{
-    position: relative;
 }
 .hotproduct{
     .products{
@@ -207,9 +203,13 @@
             &-img{
                 height: 325px;
                 position: relative;
+                overflow: hidden;
                 img{
                     object-fit: cover;
-                    @include mid();
+                    top: 50%;
+                    left: 50%;
+                    position: absolute;
+                    transform: translate(-50%, -50%) scale(1.1);
                 }
             }
             &-text{
@@ -255,6 +255,7 @@
     width: 100%;
     position: relative;
     padding-top: 50px;
+    overflow: hidden;
     &__bg{
         position: absolute;
         top: 0;
@@ -268,13 +269,20 @@
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        bottom: 0;
+        bottom: -30px;
+        img{
+            transform: rotate(0);
+            transform-origin: center bottom;
+        }
     }
     &__btn{
         position: absolute;
         bottom: 86px;
         left: 50%;
         transform: translateX(-50%);
+        &.btn{
+            width: max-content;
+        }
     }
 }
 .back-top{
@@ -478,6 +486,9 @@
 @include mobile{
     .main-wrapper.home{
         --h-slide: calc((100vw * 9) / 16);
+        .btn{
+            margin-top: 30px;
+        }
         
     }
     .slide{
@@ -511,7 +522,6 @@
             }
         }
     }
-    
     .news{
         .newslist{
             grid-template-columns: 1fr;
