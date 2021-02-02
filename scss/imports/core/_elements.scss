@@ -49,3 +49,13 @@ button {
 .mr-top-80{
     margin-top: 80px;
 }
+@include tablet{
+    .mr-120{
+        margin-top: 60px;
+    }
+}
+@include mobile{
+    .mr-120{
+        margin-top: 30px;
+    }
+}
